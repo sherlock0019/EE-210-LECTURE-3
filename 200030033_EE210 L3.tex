@@ -1,0 +1,94 @@
+\documentclass{article}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{graphics,graphicx}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{algpseudocode}
+
+\title{EE 210 LECTURE 3}
+\author{Pranay Kamal Miriyala\\\\\url{ 200030033@iitdh.ac.in}\\\\Department of Electrical Engineering}
+
+\begin{document}
+\maketitle
+
+\newpage
+\tableofcontents
+
+\newpage
+
+\section{Introduction}
+Let us go through the basic idea of a signal and a system.\\\\
+1. \textbf{Signal} : Signal is any physical quantity that is measurable and conveys some information. In this course, a signal is represented by a mathematical function of an independent variable.\\\\
+2. \textbf{Systems} : System is physical entity that either generates a signal or processes a signal to produce modified verision of the input signal. In this course, a system is represented by mathematical operator which operates on some signal to give the desired output.
+
+\section{Classification of Signals \& Digital processing}
+\subsection{Classification of Signals}
+1. Analog Signals : The signals whose values are continuous over the range of dependent variable, are called analog signals. \\\\
+2. Digital Signals : The signals whose values are discrete over the range of dependent variable, are called digital signals.
+\subsection{Digital processing}
+If X(t) is a signal, and it takes continuous values, it is a analog signal and if it takes discrete values, it is a digital signal.\\\\For example, speech outputs of microphone are analog signals, whereas stock market prices in a day can be related to Digital signals.At origin, all signals are considered \textbf{analog}\\\\
+The Significance of Digital Processing:\\\\
+1. Low cost\\ 
+2. Noise robustness\\
+
+Firstly, an analog circuit is converted into \textbf{electrical form} form \textbf{non electrical form} through a sensor using a microphone.\\
+
+An \textbf{analog and a continuous time signal} can be converted to \textbf{analog and a discrete time signal} by sampling process and passing signal through hold circuit.\\
+\footnote{Here 't' refers to time in all contexts}
+\newpage
+
+Then this modified signal is further converted into \textbf{digital and discrete signal} by a quantizer \& encoder. quantizer and encoder are collectively called as \textbf{ADE(analog to digital conversion)}\\
+
+
+The components and processes involved in conversion of Analog continuous time signal to Digital and discrete time signal are :\\\\
+1. Sensor (Microphone)\\
+2. Sampling\\
+3. Hold Circuit\\
+4. Quantizer\\
+5. Encoder\\
+
+
+\section{Periodic and Aperiodic signals}
+\subsection{Definition}
+
+1. \textbf{Periodic signals} : The \textbf{\textit{minimum positive value of t\textsubscript{o}}}, for which X(t) = X(t+t\textsubscript{o}), for some t\textsubscript{o} is called the fundamental period of X(t). If such fundamental period exists, then X(t) is called a periodic signal.\\\\
+2. \textbf{Aperiodic signals} : If for a signal X(t), X(t) $\neq$ X(t+t\textsubscript{o}), for any t\textsubscript{o}, or simply a fundamental period does not exist, then it is called an Aperiodic signal.
+
+\subsection{Periodicity in analog and digital signals}
+
+For analog signals, the condition \textit{X(t) = X(t+t\textsubscript{o})\, for some t\textsubscript{o}} , where t\textsubscript{o} takes any real value should be satisfied for the signal to be periodic.\\
+
+Wheareas for digital signals, the condition \textit{X(t) = X(t+t\textsubscript{o})\, for some t\textsubscript{o}}, where t\textsubscript{o} takes any integer value should be satisfied for the signal to be periodic.\\ 
+
+
+
+\section{Even and Odd signals}
+If X(t) is assumed to be a signal,\\\\
+1. \textbf{Even Signal} : If X(t) = X(-t), for all t $>$ 0, then the signal is an even signal.\\
+2. \textbf{Odd Signal} : If X(t) $\neq$ X(-t), for all t $>$ 0, then the signal is an odd signal.\\\\
+
+\newpage
+
+When the domain of the signal is changed (Time to Frequency \& Frequency to Time), we can still exploit the features of odd and even functions after the domain change, if the signal is odd or even in the previous domain.\\\\
+A given signal can have :\\\\
+1. Odd components\\
+2. Even components\\
+3. Both odd and even components\\
+\subsection{Expressing odd and even components of a signal}
+
+X(t) = X\textsubscript{odd}(t) + X\textsubscript{even}(t)\\
+X(-t) = X\textsubscript{odd}(-t) + X\textsubscript{even}(-t)\\\\
+So, we know X(t) + X(-t) = X\textsubscript{odd}(t) + X\textsubscript{even}(t) + X\textsubscript{odd}(-t) + X\textsubscript{even}(-t)\\
+X(t) + X(-t) = X\textsubscript{odd}(t) + X\textsubscript{even}(t) + X\textsubscript{odd}(t) - X\textsubscript{even}(t)\\
+X(t) + X(-t) = 2X\textsubscript{even}(t)\\\\
+so, even component of X(t) = X\textsubscript{even}(t) = $\dfrac{X(t) + X(-t)}{2}$\\\\
+similarly, X(t) - X(-t) = X\textsubscript{odd}(t) + X\textsubscript{even}(t) - X\textsubscript{odd}(-t) - X\textsubscript{even}(-t)\\
+X(t) - X(-t) = 2X\textsubscript{odd}(t)\\\\
+so, odd component of X(t) = X\textsubscript{odd}(t) = $\dfrac{X(t) - X(-t)}{2}$\\\\
+
+\textbf{Here, '-t' is just a perception that we are referring to time that is earlier than the chosen reference time and should not be confused with negative time.}
+
+
+
+\end{document}
